@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Metadados do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja GAMADORI - Produtos gamers com os melhores preços">
+
+    <!-- Título da aba e links de recursos -->
+    <title>GAMADORI - Loja Gamer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <!-- Cabeçalho da página com logotipo, navegação e botão do carrinho -->
+    <header>
+        <div class="logo">
+            <h1>🎮 GAMADORI</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <!-- Botão que abre o painel do carrinho -->
+            <button id="cart-toggle" class="cart-icon" type="button">🛒 <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <!-- Painel lateral do carrinho -->
+    <aside class="cart" id="cart">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <!-- Botão para fechar o carrinho -->
+            <button id="cart-close" class="close-btn" type="button">Fechar</button>
+        </div>
+        <!-- Lista de itens adicionados ao carrinho -->
+        <ul id="cart-items"></ul>
+        <!-- Total acumulado dos itens -->
+        <p>Total: R$ <span id="total">0,00</span></p>
+    </aside>
+
+    <main>
+        <!-- Seção principal de destaque (hero banner) -->
+        <section class="hero">
+            <h2>Bem-vindo à GAMADORI</h2>
+            <p>Os melhores produtos gamers estão aqui — qualidade, estilo e desempenho para vencer em qualquer partida.</p>
+        </section>
+
+        <!-- Seção de produtos disponíveis -->
+        <section class="produtos" id="produtos">
+            <h2>Produtos</h2>
+            <div class="lista-produtos">
+                <!-- Cartão de produto 1 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=800&q=80" alt="PlayStation 5">
+                    <h3>PlayStation 5</h3>
+                    <p>R$ 4.500</p>
+                    <!-- Chama a função JavaScript para adicionar ao carrinho -->
+                    <button type="button" onclick="addToCart('PlayStation 5', 4500)">Comprar</button>
+                </article>
+
+                <!-- Cartão de produto 2 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1611599538788-9c1b0e5a1c3e?auto=format&fit=crop&w=800&q=80" alt="Controle Xbox">
+                    <h3>Controle Xbox</h3>
+                    <p>R$ 350</p>
+                    <button type="button" onclick="addToCart('Controle Xbox', 350)">Comprar</button>
+                </article>
+
+                <!-- Cartão de produto 3 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1594559920184-8f1de69a4c5a?auto=format&fit=crop&w=800&q=80" alt="Headset Gamer">
+                    <h3>Headset Gamer</h3>
+                    <p>R$ 250</p>
+                    <button type="button" onclick="addToCart('Headset Gamer', 250)">Comprar</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção de ofertas -->
+        <section class="ofertas" id="ofertas">
+            <h2>Ofertas Especiais</h2>
+            <p>Descontos imperdíveis para montar seu setup gamer com economia.</p>
+        </section>
+    </main>
+
+    <!-- Rodapé com direitos autorais -->
+    <footer id="contato">
+        <p>&copy; 2026 GAMADORI - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
